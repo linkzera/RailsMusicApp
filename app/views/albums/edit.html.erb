@@ -1,0 +1,7 @@
+<h1>Editing Album</h1>
+<br/>
+<%= render 'form', album: @album %>
+<br/>
+<%= link_to 'Show', @album, class:'btn btn-secondary' %>  
+<%= link_to 'Back', albums_path, class:'btn btn-secondary' %>
+<%= link_to 'Delete', album_path, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %>

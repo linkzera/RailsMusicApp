@@ -1,0 +1,8 @@
+<div class="jumbotron">
+  <h1 class="display-3"><%= @album.artist %></h1>
+  <p class="lead"><strong>Album Name:</strong> <%= @album.album_name %></p>
+  <p class="lead"><strong>Year:</strong> <%= @album.year %></p>
+</div>
+<%= link_to 'Edit', edit_album_path, class:'btn btn-primary' %>
+<%= link_to 'Back', albums_path, class:'btn btn-secondary' %>
+<%= link_to 'Delete', album_path, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %>

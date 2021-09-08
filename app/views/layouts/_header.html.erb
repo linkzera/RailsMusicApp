@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <%= link_to 'Music App', root_path, class:"navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        
+        <% if user_signed_in? %>
+        <%= link_to 'Albums', albums_path, class:'nav-link' %>
+        <%= link_to 'New Album', new_album_path, class:'nav-link' %>
+         <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:'nav-link' %>
+        <%= link_to 'Edit profile', edit_user_registration_path, class:'nav-link' %>
+        <% else %>
+        <%= link_to 'Sign Up', new_user_registration_path, class:'nav-link' %>
+        <%= link_to 'Sign In', new_user_session_path, class:'nav-link' %>
+       <% end %>
+
+
+
+      </div>
+    </div>
+  </div>
+</nav>
