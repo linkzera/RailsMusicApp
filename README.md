@@ -1,24 +1,29 @@
-# README
+## RailsMusicApp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-Things you may want to cover:
+**LIVE SITE RUNNING:** https://railsmusicapp.herokuapp.com/
 
-* Ruby version
+## Features
 
-* System dependencies
+- Save your artists favorite albums
+- Albums with preset artists from an API
+- Everyone can see your album, but only you can manage yours.
 
-* Configuration
+## Installation
 
-* Database creation
+RailsMusicApp requires the list below to run.
 
-* Database initialization
+Install the dependencies and devDependencies and start the server.
+[Ruby](https://www.ruby-lang.org/pt/)
+[SQLite3](https://www.sqlite.org/index.html)
+[Node.js](https://nodejs.org/en/)
+[Yarn](https://yarnpkg.com/getting-started/install)
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+**Then run**
+```sh
+gem install rails
+bundle install
+rails s
+```
+Then enter http://localhost:3000/
