@@ -1,2 +1,6 @@
-<h1>Home page</h1>
-<p>This is an App to you list your favorites artists music albums.</p>
+<select class="form-select" aria-label="Default select example">
+<% @artists_summary.general.each do |artist| %>
+    
+        <option value="1"><%= artist[0]['name'] %></option>
+         <% end %>
+</select>

@@ -65,6 +65,19 @@ class AlbumsController < ApplicationController
     redirect_to albums_path, notice: "Not authorized to edit Album" if @album.nil?
   end
 
+  before_action :set_artists_summary_service
+  def indexx
+    @artists = @artists_summary.general
+  end
+
+  
+
+  private
+  def set_artists_summary_service
+      @artists_summary = ArtistsSummary.new
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_album
